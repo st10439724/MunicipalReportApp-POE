@@ -1,7 +1,7 @@
 # Municipal Citizen Portal
 
 An AAPD module, C# desktop application that lets residents report
-municipal issues directly to their local government.
+municipal issues directly to their local government (difficult project).
 
 **Part 1** implemented the **Report Issues**.
 **Part 2** adds **Local Events and Announcements**: searchable, date-ordered
@@ -90,7 +90,7 @@ The compiled app will be under
 
 \---
 
-## 4\. How to use our application
+## 4\. How to use This application
 
 1. **Main Menu** — On launch you'll see three options:
 

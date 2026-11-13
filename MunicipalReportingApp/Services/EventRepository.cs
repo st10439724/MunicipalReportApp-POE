@@ -9,6 +9,7 @@ namespace MunicipalReportingApp.Services
     
     ///IssueRepository, so every form sees the same data.
     
+    
   
     public sealed class EventRepository
     {
@@ -49,7 +50,7 @@ namespace MunicipalReportingApp.Services
 
             _eventsById[item.Id] = item;
 
-            // Group by calendar day inside the sorted dictionary.
+            //Here we group by calendar day inside the sorted dictionary.
             var day = item.Date.Date;
             if (!_eventsByDate.TryGetValue(day, out var dayList))
             {
@@ -59,11 +60,11 @@ namespace MunicipalReportingApp.Services
             dayList.Add(item);
             dayList.Sort((a, b) => a.Date.CompareTo(b.Date));
 
-            // Sets: duplicates are ignored automatically.
+            
             _eventDates.Add(day);
             _categories.Add(item.Category);
 
-            // Hashtable category index (values are List<int> of event Ids).
+            
             var ids = _eventsByCategory[item.Category] as List<int>;
             if (ids == null)
             {
